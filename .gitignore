@@ -1,1 +1,6 @@
 macrecpro-venv
+config/api-config.json
+data
+logs
+__pycache__
+macrec-test
