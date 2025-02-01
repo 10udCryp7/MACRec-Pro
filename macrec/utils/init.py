@@ -11,7 +11,7 @@ def init_openai_api(api_config: dict):
     Args:
         `api_config` (`dict`): OpenAI API configuration, should contain `api_base` and `api_key`.
     """
-    os.environ["OPENAI_API_BASE"] = api_config['api_base']
+    # os.environ["OPENAI_API_BASE"] = api_config['api_base']
     os.environ["OPENAI_API_KEY"] = api_config['api_key']
 
 def init_all_seeds(seed: int = 0) -> None:

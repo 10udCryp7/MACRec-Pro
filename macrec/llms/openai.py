@@ -14,8 +14,8 @@ class AnyOpenAILLM(BaseLLM):
         """
         self.model_name = model_name
         self.json_mode = json_mode
-        if json_mode and self.model_name not in ['gpt-3.5-turbo-1106', 'gpt-4-1106-preview']:
-            raise ValueError("json_mode is only available for gpt-3.5-turbo-1106 and gpt-4-1106-preview")
+        # if json_mode and self.model_name not in ['gpt-3.5-turbo-1106', 'gpt-4-1106-preview']:
+        #     raise ValueError("json_mode is only available for gpt-3.5-turbo-1106 and gpt-4-1106-preview")
         self.max_tokens: int = kwargs.get('max_tokens', 256)
         self.max_context_length: int = 16384 if '16k' in model_name else 32768 if '32k' in model_name else 4096
         if model_name.split('-')[0] == 'text' or model_name == 'gpt-3.5-turbo-instruct':
