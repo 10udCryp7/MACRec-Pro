@@ -6,6 +6,7 @@ class BaseLLM(ABC):
         self.max_tokens: int
         self.max_context_length: int
         self.json_mode: bool
+        self.img_processing: bool
         
     @property
     def tokens_limit(self) -> int:

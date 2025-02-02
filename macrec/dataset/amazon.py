@@ -56,7 +56,7 @@ def process_item_data(data_df: pd.DataFrame, meta_df: pd.DataFrame) -> pd.DataFr
     useful_meta_df = meta_df[meta_df['asin'].isin(data_df['asin'])].reset_index(drop=True)
 
     item_df = useful_meta_df.rename(columns={'asin': 'item_id'})
-    item_df = item_df[['item_id', 'title', 'brand', 'price', 'categories']]
+    item_df = item_df[['item_id', 'title', 'brand', 'price', 'categories', 'imUrl']]
 
     # reindex (start from 1)
     user2id, item2id = reindex(data_df)

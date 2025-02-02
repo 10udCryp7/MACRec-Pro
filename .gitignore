@@ -4,4 +4,5 @@ data
 logs
 __pycache__
 macrec-test
-
+.env
+experiment
